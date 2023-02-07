@@ -57,7 +57,18 @@ spring.datasource.password=receitas123
 
 ![image](https://user-images.githubusercontent.com/18126923/217339357-a811c60c-6005-41f8-a43e-649fefc71d8b.png)
 
-### Videos
+**Executar o projeto e testar os endpoints criados:**
+
+Como o arquivo **ReceitaApiApplication.java** selecionado, clicar no botão **RUN**
+![image](https://user-images.githubusercontent.com/18126923/217344933-b9124bfa-d279-4b07-bc86-4810c138c3e3.png)
+
+Depois que a aplicação subir sem erros e apresentar a mensagem **Started ReceitaApiApplication**
+![image](https://user-images.githubusercontent.com/18126923/217345017-5b71158a-f1d4-4c9f-a169-6484d6e54df2.png)
+
+Acessar pelo seu Browser de preferencia o endereço **http://localhost:8080/receita-api/listar**
+![image](https://user-images.githubusercontent.com/18126923/217345134-f8c3eefc-f1e5-4afb-88b7-a283c566e7e8.png)
+
+### Videos do projeto
 [API, guia rápido](https://youtu.be/FyI6vsLK0ng)🚀  
 [Aula 1   Montando a estrutura base do projeto](https://youtu.be/WTW24-XmRfg)  
 [Aula 2   Criando o repositório remoto para o projeto](https://youtu.be/e6D8KAQMexY)
