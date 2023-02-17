@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -21,17 +22,30 @@ public class Receita {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Long id;
+
+    @Column(name="name", length=100, nullable=false)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String nome;
+
+    @Column(name="descricao", length=250, nullable=false)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String descricao;
+
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
     @JsonInclude(JsonInclude.Include.NON_NULL)
+    @Temporal(TemporalType.DATE)
+    @Column(name="data_inclusao", updatable = false)
     private Date dataInclusao;
+
+    @Column(name="autor", length=100, nullable=false)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String autor;
+
+    @Column(name="modo_de_preparo", nullable=false)
     @JsonInclude(JsonInclude.Include.NON_NULL)
+    @Lob
     private String modoDePreparo;
+
     @Transient
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private List<Ingrediente> ingredientes;

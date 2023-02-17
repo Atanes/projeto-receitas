@@ -25,4 +25,11 @@ public class ReceitaController {
         receita.setDataInclusao(new Date());
         return receitaRepository.save(receita);
     }
+
+    @PutMapping(value = "/{id}")
+    public Receita atualizarReceita(@PathVariable ("id") Long id, @RequestBody Receita receita){
+        receita.setId(id);
+        return receitaRepository.save(receita);
+    }
+
 }
