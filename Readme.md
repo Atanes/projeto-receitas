@@ -78,3 +78,4 @@ Acessar pelo seu Browser de preferencia o endereço **http://localhost:8080/rece
 [JPA Repositories](https://docs.spring.io/spring-data/jpa/docs/1.5.0.RELEASE/reference/html/jpa.repositories.html)  
 [Database initialization](https://docs.spring.io/spring-boot/docs/1.1.0.M1/reference/html/howto-database-initialization.html)  
 [Jackson Date](https://www.baeldung.com/jackson-serialize-dates)  
+[JPA: avoiding columns to being insertable and/or updatable](https://medium.com/@bortolattol/jpa-avoiding-columns-to-being-insertable-and-or-updatable-fc8e8d54ccee)  
