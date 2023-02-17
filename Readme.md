@@ -72,3 +72,9 @@ Acessar pelo seu Browser de preferencia o endereço **http://localhost:8080/rece
 [API, guia rápido](https://youtu.be/FyI6vsLK0ng)🚀  
 [Aula 1   Montando a estrutura base do projeto](https://youtu.be/WTW24-XmRfg)  
 [Aula 2   Criando o repositório remoto para o projeto](https://youtu.be/e6D8KAQMexY)
+
+### Links para consulta e mais estudos
+[Defining JPA Entities](https://www.baeldung.com/jpa-entities)  
+[JPA Repositories](https://docs.spring.io/spring-data/jpa/docs/1.5.0.RELEASE/reference/html/jpa.repositories.html)  
+[Database initialization](https://docs.spring.io/spring-boot/docs/1.1.0.M1/reference/html/howto-database-initialization.html)  
+[Jackson Date](https://www.baeldung.com/jackson-serialize-dates)  

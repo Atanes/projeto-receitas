@@ -1,21 +1,35 @@
 package com.iridimit.receitaapi.controller;
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.iridimit.receitaapi.model.Receita;
+import com.iridimit.receitaapi.repository.ReceitaRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Date;
+import java.util.List;
 
 @RestController
-@RequestMapping(value = "/receita-api")
+@RequestMapping(value = "/receitas")
 public class ReceitaController {
 
-    @GetMapping(value = "/listar")
-    public ResponseEntity<String> listarReceitas(){
-        return ResponseEntity.ok("Listagem de receitas");
+    @Autowired
+    ReceitaRepository receitaRepository;
+
+    @GetMapping
+    public List<Receita> listarReceitas(){
+        return receitaRepository.findAll();
     }
 
-    @GetMapping(value = "/uma-receita")
-    public ResponseEntity<String> getReceita(){
-        return ResponseEntity.ok("Lista uma unica receita!!!!!!");
+    @PostMapping
+    public Receita salvarReceita(@RequestBody Receita receita){
+        receita.setDataInclusao(new Date());
+        return receitaRepository.save(receita);
     }
+
+    @PutMapping(value = "/{id}")
+    public Receita atualizarReceita(@PathVariable ("id") Long id, @RequestBody Receita receita){
+        receita.setId(id);
+        return receitaRepository.save(receita);
+    }
+
 }
