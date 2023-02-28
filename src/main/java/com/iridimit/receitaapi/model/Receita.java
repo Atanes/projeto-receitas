@@ -23,7 +23,7 @@ public class Receita {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Long id;
 
-    @Column(name="name", length=100, nullable=false)
+    @Column(name="nome", length=100, nullable=false)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String nome;
 
