@@ -48,10 +48,12 @@ spring.datasource.password=receitas123
 
 **Criar os pacotes de trabalho base pelo IntelliJ**:  
 - **controller** -> classes com os endpoints da api que vão receber as chamadas externas e devolver as informações/recursos da nossa API  
+- **error.handler** -> classes relacionadas com o controle e gestão de excessões (erros) da aplicação  
 - **model** -> classes de modelo com as estruturas base da nossa aplicação (receita, imagem, ingrediente)  
+- **repository** -> classes responsáveis pela persistência de dados da aplicação  
 - **service** -> classes que vão fazer e controlar toda a lógica de nécio por trás de cada endpoint da aplicação  
 
-![image](https://user-images.githubusercontent.com/18126923/217339198-4ccd3a86-d296-41d5-86b6-0cb8358514f4.png)  
+![estrututaAtualProjeto](https://user-images.githubusercontent.com/18126923/224127458-ee86f32f-d02c-4f9b-9199-19c4d68075b3.png)
 
 **Criando nosso primeiro endpoint pelo IntelliJ:**  
 
@@ -79,3 +81,4 @@ Acessar pelo seu Browser de preferencia o endereço **http://localhost:8080/rece
 [Database initialization](https://docs.spring.io/spring-boot/docs/1.1.0.M1/reference/html/howto-database-initialization.html)  
 [Jackson Date](https://www.baeldung.com/jackson-serialize-dates)  
 [JPA: avoiding columns to being insertable and/or updatable](https://medium.com/@bortolattol/jpa-avoiding-columns-to-being-insertable-and-or-updatable-fc8e8d54ccee)  
+[Spring boot Exceptions Handler (tratamento de erros)](https://www.baeldung.com/exception-handling-for-rest-with-spring)
