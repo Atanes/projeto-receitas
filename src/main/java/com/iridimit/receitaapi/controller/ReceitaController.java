@@ -3,7 +3,6 @@ package com.iridimit.receitaapi.controller;
 import com.iridimit.receitaapi.model.Receita;
 import com.iridimit.receitaapi.service.ReceitaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -25,11 +24,7 @@ public class ReceitaController {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<?> buscaReceita(@PathVariable("id") Long id) {
-        try {
-            return ResponseEntity.ok().body(receitaService.buscarPorId(id));
-        } catch (RuntimeException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
-        }
+        return ResponseEntity.ok().body(receitaService.buscarPorId(id));
     }
 
     @PostMapping
@@ -45,21 +40,13 @@ public class ReceitaController {
 
     @PutMapping(value = "/{id}")
     public ResponseEntity<?> atualizarReceita(@PathVariable("id") Long id, @RequestBody Receita receita) {
-        try {
             receitaService.atualizar(id, receita);
             return ResponseEntity.noContent().build();
-        } catch (RuntimeException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
-        }
     }
 
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<?> excluirReceita(@PathVariable("id") Long id) {
-        try {
             receitaService.excluir(id);
             return ResponseEntity.noContent().build();
-        } catch (RuntimeException e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
-        }
     }
 }
