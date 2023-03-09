@@ -1,0 +1,3 @@
+INSERT INTO public.receita (autor, data_inclusao, descricao, modo_de_preparo, nome) VALUES ('Marcia Maria', '2023-03-03', 'Melhor Bolo de Fubá do Brasil', lo_from_bytea(0,'Separar todos os ingredientes....'), 'Bolo de Fubá');
+INSERT INTO public.receita (autor, data_inclusao, descricao, modo_de_preparo, nome) VALUES ('Daniela', '2023-03-03', 'Arroz de forno Paulista', lo_from_bytea(0,'Separar todos os ingredientes....'), 'Arroz de forno');
+INSERT INTO public.receita (autor, data_inclusao, descricao, modo_de_preparo, nome) VALUES ('Adriano Dantas', '2023-03-03', 'Pudim de leite com calda de caramelo', lo_from_bytea(0,'Separar todos os ingredientes....'), 'Pudim de leite');
